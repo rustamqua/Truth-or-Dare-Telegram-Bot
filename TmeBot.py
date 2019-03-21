@@ -2,7 +2,8 @@ import telebot
 import constants
 import BotType
 import random
-bot= telebot.TeleBot(token=constants.token)
+constructor=BotType.Facade()
+bot=constructor.getBot()
 new=BotType.Game()
 @bot.message_handler(commands=["start"])
 def welcome(message):
@@ -44,5 +45,4 @@ def play(message):
     else:
         r1=random.randrange(0,len(new.Game_Dare))
         bot.send_message(message.chat.id,"Dare! "+new.Game_Dare[r1])
-
-bot.polling()
+constructor.start()

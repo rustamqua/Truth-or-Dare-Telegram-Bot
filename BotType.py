@@ -1,7 +1,10 @@
 import constants
+import telebot
 class Game:
-    Game_Truth=constants.truth_halal
-    Game_Dare=constants.dare_list
+    def __init__(self):
+        self.Game_Truth=constants.truth_halal
+        self.Game_Dare=constants.dare_list
+        self.bot=telebot.TeleBot(constants.token)   
     def setFriends(self):
         self.Game_Truth=constants.truth_frineds
     def setBasic(self):
@@ -18,3 +21,15 @@ class Game:
         return self.Game_Truth
     def getDare(self):
         return self.Game_Dare
+    def startPolling(self):
+        self.bot.polling()
+    def getBot(self):
+        return self.bot
+class Facade:
+    def __init__(self):
+        self.bot=Game()
+    def start(self):
+        self.bot.startPolling()
+    def getBot(self):
+        return self.bot.getBot()
+    
