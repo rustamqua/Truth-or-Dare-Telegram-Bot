@@ -1,6 +1,6 @@
 import constants
 class Game:
-    Game_Truth=list()
+    Game_Truth=constants.truth_halal
     Game_Dare=constants.dare_list
     def setFriends(self):
         self.Game_Truth=constants.truth_frineds
@@ -14,4 +14,7 @@ class Game:
         self.Game_Truth=constants.truth_flirt
     def setGuys(self):
         self.Game_Truth=constants.truth_guys
-
+    def getTruth(self):
+        return self.Game_Truth
+    def getDare(self):
+        return self.Game_Dare
