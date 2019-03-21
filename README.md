@@ -19,3 +19,5 @@
 7.Заюзать какой-то NoSQL датабейз (firebase или локальное что-то) :x:
 
 8.Задеплоить на какой-то hosting (Digital Ocean, AWS, Heroku) :heavy_check_mark: (pythonanywhere)
+
+Authors(Rustam-Deniz Emirali, Dastan Akhmetkerey)
